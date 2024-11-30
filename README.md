@@ -20,6 +20,9 @@ services:
       # Expose port 443 on TCP and UDP for HTTPS web interface
       - "443:443/tcp"
       - "443:443/udp"
+
+      # Expose port 3000 on TCP for AdGuard Home's API
+      - "3000:3000/tcp"
     volumes:
       - /etc/adguard/work:/opt/adguardhome/work
       - /etc/adguard/confdir:/opt/adguardhome/conf
