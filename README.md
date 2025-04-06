@@ -43,3 +43,18 @@ sudo rm /etc/resolv.conf
 sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 ```
+
+# Block ad over WiFi
+```
+ In WiFi settings, configure manual DNS and point to the server where adguard service is running
+```
+
+# Block ad over cellular network
+```
+sudo tailscale up --accept-dns=false
+
+Login to tailscale.com -> DNS -> Global nameservers -> Public Tailscale IP -> Override DNS Servers
+
+Refer: https://tailscale.com/kb/1114/pi-hole
+
+```
