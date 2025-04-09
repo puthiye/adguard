@@ -2,11 +2,13 @@
 
 ```
 services:
-  adguardhome:
-    image: adguard/adguardhome
-    container_name: adguardhome
-    restart: unless-stopped
-    ports:
+  adguardhome: 
+    image: adguard/adguardhome  
+    container_name: adguardhome 
+    restart: unless-stopped 
+    environment:
+            - TZ=Australia/Melbourne
+    ports:  
       # Expose port 53 on TCP and UDP for DNS queries
       - "53:53/tcp"
       - "53:53/udp"
@@ -21,9 +23,9 @@ services:
       - "443:443/tcp"
       - "443:443/udp"
 
-      # Expose port 3000 on TCP for AdGuard Home's API
-      - "3000:3000/tcp"
-    volumes:
+     # Expose port 3000 on TCP for AdGuard Home's API
+      - "3000:3000/tcp"   
+    volumes:  
       - /etc/adguard/work:/opt/adguardhome/work
       - /etc/adguard/confdir:/opt/adguardhome/conf
 ```
