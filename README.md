@@ -57,7 +57,9 @@ Login to tailscale.com -> DNS -> Global nameservers -> Raspberry Pi's unique Tai
 
 "Override DNS Servers" is a **global** setting that forces** all devices** in the Tailnet to use the globally configured Tailscale DNS servers, overriding their local DNS configurations. When enabled, devices ignore their existing DNS settings and always query the Tailscale-defined nameservers. 
 ```
+
 The iOS tailscale app will get the below DNS ip address which is the Raspberry Pi's unique Tailscale IP
+
 ![1ios_tailscale_dns](https://github.com/user-attachments/assets/48b59c02-e975-46d1-b26b-e411b13377df)
 
 
