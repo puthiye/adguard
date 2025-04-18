@@ -53,11 +53,13 @@ sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 # Block ad over cellular network
 ```
-sudo tailscale up --accept-dns=false
+Login to tailscale.com -> DNS -> Global nameservers -> Raspberry Pi's unique Tailscale IP -> Enable Override DNS Servers
 
-Login to tailscale.com -> DNS -> Global nameservers -> Public Tailscale IP -> Override DNS Servers
+"Override DNS Servers" is a **global** setting that forces** all devices** in the Tailnet to use the globally configured Tailscale DNS servers, overriding their local DNS configurations. When enabled, devices ignore their existing DNS settings and always query the Tailscale-defined nameservers. 
 
-Refer: https://tailscale.com/kb/1114/pi-hole
+The iOS tailscale app will get the below DNS ip address which is the Raspberry Pi's unique Tailscale IP
+
+![ios_tailscale_dns](https://github.com/user-attachments/assets/b7374230-ba75-4862-8949-0b7a3748b7bb)
 
 ```
 
