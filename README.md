@@ -60,3 +60,14 @@ Login to tailscale.com -> DNS -> Global nameservers -> Public Tailscale IP -> Ov
 Refer: https://tailscale.com/kb/1114/pi-hole
 
 ```
+
+# Override blocking rules for certain domains
+
+Adguard rules can block iOS app store and Amazon music service. To resolve this issue goto Adguard settings, add Custom Filtering
+```
+@@||apple.com^$important
+@@||amazon.com^$important^
+
+```
+
+
