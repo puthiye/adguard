@@ -38,7 +38,7 @@ Goto settings -> dns
 
 upstream dns: https://dns10.quad9.net/dns-query
 
-Port 53 port bind error
+# Port 53 port bind error
 
 ```
 
