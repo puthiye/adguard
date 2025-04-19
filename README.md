@@ -30,6 +30,14 @@ services:
       - /etc/adguard/confdir:/opt/adguardhome/conf
 ```
 
+# adguard upstream dns server
+
+The adguard web interface shows the upstream dns server. The upstream dns server will be contacted for URLs which are not in the block list.
+
+Goto settings -> dns
+
+upstream dns: https://dns10.quad9.net/dns-query
+
 Port 53 port bind error
 
 ```
